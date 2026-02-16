@@ -8,7 +8,8 @@ class Book {
     String author;
     boolean isIssued;
 
-    public Book(int bookId, String title, String author) {
+    public Book(int bookId, String title, String author)
+    {
         this.bookId = bookId;
         this.title = title;
         this.author = author;
@@ -16,10 +17,7 @@ class Book {
     }
 
     public void displayBook() {
-        System.out.println("ID: " + bookId +
-                ", Title: " + title +
-                ", Author: " + author +
-                ", Issued: " + isIssued);
+        System.out.println("ID: " + bookId + ", Title: " + title + ", Author: " + author + ", Issued: " + isIssued);
     }
 }
 
@@ -36,10 +34,11 @@ class User {
 
 // Library Class
 class Library {
-    ArrayList<Book> books = new ArrayList<>();
+    ArrayList<Book>books = new ArrayList<>();
 
     // Add Book
-    public void addBook(Book book) {
+    public void addBook(Book book)
+    {
         books.add(book);
         System.out.println("Book added successfully!");
     }
@@ -62,7 +61,8 @@ class Library {
                 if (!b.isIssued) {
                     b.isIssued = true;
                     System.out.println("Book issued successfully!");
-                } else {
+                } else
+                {
                     System.out.println("Book already issued!");
                 }
                 return;
@@ -75,10 +75,12 @@ class Library {
     public void returnBook(int bookId) {
         for (Book b : books) {
             if (b.bookId == bookId) {
-                if (b.isIssued) {
+                if (b.isIssued)
+                {
                     b.isIssued = false;
                     System.out.println("Book returned successfully!");
-                } else {
+                } else
+                {
                     System.out.println("Book was not issued!");
                 }
                 return;
@@ -90,7 +92,8 @@ class Library {
 
 // Main Class
 public class LibraryManagementSystem {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
         Scanner sc = new Scanner(System.in);
         Library library = new Library();
