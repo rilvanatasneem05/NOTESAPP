@@ -113,7 +113,7 @@ public class LibraryManagementSystem {
                 case 1:
                     System.out.print("Enter Book ID: ");
                     int id = sc.nextInt();
-                    sc.nextLine(); // clear buffer
+                    sc.nextLine();
                     System.out.print("Enter Title: ");
                     String title = sc.nextLine();
                     System.out.print("Enter Author: ");
@@ -148,4 +148,6 @@ public class LibraryManagementSystem {
             }
         }
     }
+
 }
+
